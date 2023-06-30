@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agradecimento</title>
+    <style>
+        body {
+            background-color: #f4f4f4;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 40px;
+            text-align: center;
+            background-color: #373737;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px #373737;
+            animation: fadein 1s ease-in-out;
+            cursor: pointer;
+        }
+
+        @keyframes fadein {
+            from {
+                opacity: 0;
+                transform: translateY(1000px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h1 {
+            color: #C0B283;
+        }
+
+        p {
+            color: #C0B283;
+            margin-bottom: 10px;
+            display: none;
+        }
+
+        .show-message {
+            display: block;
+            background: border-box;
+            border-color: #f4f4f4;
+            border: double 3px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Obrigado pelo envio do formulário!</h1>
+
+        <p class="show-message" id="dados">Clique para ver o formulário.</p>
+    </div>
+
+    <script>
+        window.addEventListener('DOMContentLoaded', function () {
+            // Função para decodificar os cookies
+            function decodeCookie(cookie) {
+                return decodeURIComponent(cookie.split('=')[1]);
+            }
+
+            // Obter os cookies gravados
+            var cookies = document.cookie.split(';');
+
+            // Variáveis para armazenar os valores dos cookies
+            var nome = '';
+            var email = '';
+            var msg = '';
+
+            // Alterar sobre os cookies e obter os valores desejados
+            for (var i = 0; i < cookies.length; i++) {
+                var cookie = cookies[i].trim();
+                if (cookie.startsWith('nome=')) {
+                    nome = decodeCookie(cookie);
+                } else if (cookie.startsWith('email=')) {
+                    email = decodeCookie(cookie);
+                } else if (cookie.startsWith('msg=')) {
+                    msg = decodeCookie(cookie);
+                }
+            }
+
+            // Exibir os valores no parágrafo
+            var dadosParagrafo = document.getElementById('dados');
+            dadosParagrafo.textContent = 'Clique para ver o formulário.';
+
+            // Função para mostrar a mensagem oculta
+            function showHiddenMessage() {
+                var message = document.getElementById('dados');
+                message.classList.add('show-message');
+                message.textContent = 'Nome: ' + nome + ', Email: ' + email + ', Mensagem: ' + msg;
+            }
+
+            // Adicionar evento de clique ao container
+            var container = document.querySelector('.container');
+            container.addEventListener('click', showHiddenMessage);
+        });
+    </script>
+</body>
+
+</html>

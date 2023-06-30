@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="Pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio Pessoal</title>
+    <link rel="stylesheet" href="port.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fauna+One&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <h1>Bruno Giacomantonio</h1>
+
+    </header>
+    <Nav>
+        <ul>
+            <li><a href="#Inicio">Inicio</a></li>
+            <li><a href="#Projetos">Projetos</a></li>
+            <li><a href="#Sobre">Sobre</a></li>
+            <li><a href="#Contato">Contato</a></li>
+        </ul>
+    </Nav>
+    <main>
+        <section id="Inicio">
+            <h2>Inicio</h2>
+            <p>Olá! Seja bem-vindo ao meu portfólio, me chamo Bruno e sou um web designer recem-formado.</p>
+
+        </section>
+        <section id="Projetos">
+            <h2>Projetos</h2>
+            <article class="box">
+                <h3>Responsividade</h3>
+
+                <p>Este foi meu primeiro projeto responsivo:</p>
+
+                <img class="png1" src="projeto1.png" height="200" width="200" alt="imagem projeto 1"><br>
+
+                <a class="mais" target="_blank"
+                    href="https://drive.google.com/file/d/1Og1fJm5UyPUQ4UestYethWgrVOVKRQ9g/view?usp=drive_link">Saiba
+                    mais</a>
+            </article>
+            <article class="box">
+                <h3>Validação JavaScript</h3>
+                <p>Um form de Validação simples utilizando o JavaScript:</p>
+                <img class="png2" src="projeto2.png" height="100" width="450"><br>
+                <a class="mais"
+                    href="https://drive.google.com/file/d/19Tuz_E2x_0CI4PWgvqBcO0loyCsLdTa0/view?usp=sharing"
+                    target="_blank">Saiba mais</a>
+            </article>
+
+        </section>
+        <section id="Sobre">
+            <h2>Sobre</h2>
+            <img class="img" src="foto.jpg" alt="foto minha" width="100" height="100">
+            <p class="p">Um pouco sobre mim como profissional de web design. Orgulhosamente, sou formado pelo SENAI no
+                curso de
+                Web Designer Front End em 2023.</p>
+
+            <p class="p">Durante esse curso, mergulhei fundo nas linguagens que formam a base do desenvolvimento web:
+                HTML, CSS e
+                Java. Através desse conhecimento, tenho a habilidade de criar interfaces atraentes e funcionais para
+                websites. Meu objetivo é unir design e usabilidade para proporcionar uma experiência digital
+                memorável aos usuários.</p>
+
+            <p class="p">Mas não paro por aí! A busca pelo conhecimento é uma constante em minha vida. Atualmente, estou
+                cursando
+                Engenharia da Computação, buscando aprofundar meus conhecimentos técnicos e explorar novas áreas dentro
+                da tecnologia. Essa jornada acadêmica é um reflexo do meu comprometimento em estar sempre atualizado
+                e preparado para os desafios do futuro.</p>
+        </section>
+
+        <section id="Contato">
+            <h2>contato</h2>
+            <form id="form-contato" action="Agradecimento.html" target="_blank" onsubmit="return Validar()">
+                <label for="nome"> Nome:</label>
+                <input id="nome" type="text" name="nome" />
+
+                <label for="email">E-mail:</label>
+                <input id="email" type="email" name="email" />
+
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="msg" name="mensagem"></textarea>
+
+                <input class="butt btn btn-white btn-animate" type="submit" value="Enviar">
+
+    </main>
+    <footer>
+        <p>&copy;<b>Todos direitos reservados / Desenvolvido por Bruno Giacomantonio.</b></p>
+
+        <a class="linkedin" href="https://www.linkedin.com/in/bruno-giacomantonio-3238aa18b" target="_blank">
+
+        </a>
+        <a class="whatsapp" href="https://api.whatsapp.com/send?phone=5514996303840&text=Ol%C3%A1,%20me%20chamo%20Bruno"
+            target="_blank">
+
+        </a>
+        <a class="mail" href="mailto:giacomantoniobruno@gmail.com" target="_blank">
+
+        </a>
+    </footer>
+    <script src="port.js">
+
+    </script>
+</body>
+
+</html>
